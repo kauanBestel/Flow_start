@@ -1,16 +1,11 @@
 import { auth, signOut, signIn } from "@/auth";
-import {
-  getProviders,
-  SessionProvider,
-  SignInAuthorizationParams,
-} from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = async () => {
   const session = await auth();
   return (
-    <header className="px-5 py-5  shadow-sm font-work-sans bg-blue-300">
+    <header className="px-5 py-5  shadow-sm font-work-sans bg-primary-blackl-100 ">
       <nav className="flex justify-between items-center">
         <Link href="/">
           <Image src={"/logo.svg"} alt="logo" width={94} height={30}></Image>
